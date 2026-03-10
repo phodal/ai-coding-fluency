@@ -1,35 +1,35 @@
+// --- Tabs utility ---
 function initTabs(navId, contentId, items, renderTab, renderPanel) {
   const nav = document.getElementById(navId);
   const content = document.getElementById(contentId);
+
+  // Render tabs
   nav.innerHTML = items.map((item, i) => renderTab(item, i)).join('');
-  content.innerHTML = items.map((item, i) =>
-    '<div class="tab-panel ' + (i === 0 ? 'active' : '') + '" data-panel="' + i + '">' + renderPanel(item, i) + '</div>'
+
+  // Render panels
+  content.innerHTML = items.map((item, i) => 
+    `<div class="tab-panel ${i === 0 ? 'active' : ''}" data-panel="${i}">${renderPanel(item, i)}</div>`
   ).join('');
-  nav.querySelectorAll('.tab-btn').forEach(function(btn) {
-    btn.addEventListener('click', function() {
-      nav.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
-      content.querySelectorAll('.tab-panel').forEach(function(p) { p.classList.remove('active'); });
+
+  // Bind clicks
+  nav.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      nav.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      content.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
       btn.classList.add('active');
-      content.querySelector('[data-panel="' + btn.dataset.tab + '"]').classList.add('active');
+      content.querySelector(`[data-panel="${btn.dataset.tab}"]`).classList.add('active');
     });
   });
 }
 
-function icon(id) { return ICONS[id] || ''; }
-
-// Levels Tabs
+// --- Levels Tabs ---
 initTabs('level-tabs', 'level-content', LEVELS,
-  function(level, i) {
-    return '<button class="tab-btn ' + (i === 0 ? 'active' : '') + '" data-tab="' + i + '" role="tab">'
-      + '<span class="tab-dot" style="background:' + level.color + '"></span>'
-      + level.name + '</button>';
-  },
-  function(level) {
-    return '<div class="level-panel-header">'
-      + '<span class="level-panel-dot" style="background:' + level.color + '"></span>'
-      + '<span class="level-panel-name">' + level.name + '</span>'
-      + '<span class="level-panel-name-cn">' + level.nameCn + '</span></div>'
-      + '<p class="level-panel-summary">' + level.summary + '</p>'
+  (level, i) => `
+    <button class="tab-btn ${i === 0 ? 'active' : ''}" data-tab="${i}" role="tab">
+      <span class="tab-dot" style="background:${level.color}"></span>
+      ${level.name}
+    </button>
+  `,
   (level, i) => `
     <div class="level-panel-header">
       <span class="level-panel-dot" style="background:${level.color}"></span>
@@ -55,17 +55,40 @@ initTabs('level-tabs', 'level-content', LEVELS,
     </div>
     ` : ''}
   `
-  DIMENSIONS.forEach(dim => {
-    html += `<tr><th><span class="matrix-dim-icon">${dim.icon}</span>${dim.name}<br><span style="font-weight:400">${dim.nameCn}</span></th>`;
-    dim.levels.forEach(l => {
-      html += `<td><span class="matrix-cell-title">${l.title}</span>${l.desc.split('。')[0]}。</td>`;
-    });
-    html += '</tr>';
-  });
-  
-  html += '</tbody>';
-  table.innerHTML = html;
-})();// --- Matrix Table ---
+);
+
+// --- Dimensions Tabs ---
+initTabs('dim-tabs', 'dim-content', DIMENSIONS,
+  (dim, i) => `
+    <button class="tab-btn ${i === 0 ? 'active' : ''}" data-tab="${i}" role="tab">
+      <span class="tab-icon">${dim.icon}</span>
+      ${dim.nameCn}
+    </button>
+  `,
+  (dim, i) => `
+    <div class="dim-panel-header">
+      <span class="dim-panel-icon">${dim.icon}</span>
+      <span class="dim-panel-name">${dim.name}</span>
+      <span class="dim-panel-name-cn">${dim.nameCn}</span>
+    </div>
+    <p class="dim-panel-summary">${dim.summary}</p>
+    <p class="dim-panel-desc">${dim.description}</p>
+    <div class="dim-levels-list">
+      ${dim.levels.map((l, li) => `
+        <div class="dim-level-item" style="border-left-color:${LEVELS[li].color}">
+          <div class="dim-level-item-header">
+            <span class="dim-level-dot" style="background:${LEVELS[li].color}"></span>
+            <span class="dim-level-label">${LEVELS[li].name} · ${LEVELS[li].nameCn}</span>
+          </div>
+          <div class="dim-level-title">${l.title}</div>
+          <div class="dim-level-desc">${l.desc}</div>
+        </div>
+      `).join('')}
+    </div>
+  `
+);
+
+// --- Matrix Table ---
 (function renderMatrix() {
   const container = document.getElementById('matrix-table').parentElement;
   
