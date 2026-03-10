@@ -221,6 +221,44 @@ a:hover { text-decoration: underline; }
   flex-shrink: 0;
 }
 
+.level-investments,
+.level-metrics {
+  margin-top: 24px;
+}
+.level-investments h4,
+.level-metrics h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+.level-investments ul,
+.level-metrics ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.level-investments li,
+.level-metrics li {
+  font-size: 14px;
+  color: var(--text-secondary);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+.level-investments li::before {
+  content: '→';
+  color: var(--blue);
+  font-weight: 700;
+  flex-shrink: 0;
+}
+.level-metrics li::before {
+  content: '📊';
+  flex-shrink: 0;
+}
+
 /* Dimension Panel */
 .dim-panel-header {
   display: flex;
@@ -406,6 +444,49 @@ a:hover { text-decoration: underline; }
   line-height: 1.7;
 }
 
+/* Codebase Readiness */
+.readiness-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 32px 0;
+}
+.readiness-item {
+  padding: 20px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--white);
+  transition: all 0.2s;
+}
+.readiness-item:hover {
+  border-color: var(--teal);
+  box-shadow: 0 2px 8px rgba(0,61,79,0.1);
+}
+.readiness-item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--teal);
+}
+.readiness-item p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin: 0;
+}
+.readiness-note {
+  padding: 20px;
+  background: rgba(71,161,173,0.1);
+  border-left: 4px solid var(--blue);
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.7;
+  margin-top: 24px;
+}
+.readiness-note strong {
+  color: var(--teal);
+}
+
 /* Footer */
 .site-footer {
   padding: 24px 0;
@@ -425,6 +506,7 @@ a:hover { text-decoration: underline; }
   .hero h1 { font-size: 32px; }
   .section h2 { font-size: 24px; }
   .usage-steps { grid-template-columns: 1fr 1fr; }
+  .readiness-grid { grid-template-columns: 1fr; }
   .tabs-nav { gap: 0; }
   .tab-btn { padding: 10px 14px; font-size: 13px; }
 }

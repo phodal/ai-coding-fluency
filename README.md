@@ -54,7 +54,9 @@ Simply open `index.html` in a web browser to explore the model. No build process
 
 ## Credits
 
-Adapted from the [Agile Fluency® Project](https://www.agilefluency.org/) by Diana Larsen and James Shore.
+This model is adapted from the [Agile Fluency® Project](https://www.agilefluency.org/) by Diana Larsen and James Shore.
+
+We also drew inspiration from [Factory.ai's Agent Readiness framework](https://factory.ai/news/agent-readiness), which provides valuable insights on codebase-level readiness for autonomous development. While our model focuses on organizational and process maturity across five dimensions, Factory.ai's framework complements this with technical evaluation criteria for code repositories.
 
 ## License
 
