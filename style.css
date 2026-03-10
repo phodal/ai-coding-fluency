@@ -338,73 +338,125 @@ a:hover { text-decoration: underline; }
   color: var(--text-secondary);
 }
 
-/* Matrix Table */
+/* Matrix Grid */
 .matrix-wrapper {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  margin-top: 24px;
 }
-.matrix-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 13px;
-  min-width: 900px;
-}
-.matrix-table th,
-.matrix-table td {
-  padding: 12px 14px;
+
+.matrix-grid {
+  display: grid;
+  grid-template-columns: 180px repeat(5, 1fr);
+  gap: 1px;
+  background: var(--border);
   border: 1px solid var(--border);
-  vertical-align: top;
-  text-align: left;
+  min-width: 1000px;
 }
-.matrix-table thead th {
+
+.matrix-header-corner {
+  background: var(--teal);
+  padding: 16px;
+}
+
+.matrix-header-cell {
   background: var(--teal);
   color: var(--white);
-  font-weight: 600;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.matrix-dim-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.9;
+}
+
+.matrix-dim-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.matrix-dim-name {
   font-size: 13px;
-  position: sticky;
-  top: 48px;
-  z-index: 10;
+  font-weight: 600;
+  line-height: 1.3;
 }
-.matrix-table thead th:first-child {
-  min-width: 160px;
-  position: sticky;
-  left: 0;
-  z-index: 15;
-  background: var(--teal);
+
+.matrix-dim-name-cn {
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.85;
 }
-.matrix-table tbody th {
+
+.matrix-level-cell {
   background: rgba(0,61,79,0.06);
-  font-weight: 600;
-  font-size: 13px;
-  color: var(--teal);
-  min-width: 160px;
-  position: sticky;
-  left: 0;
-  z-index: 5;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  position: relative;
 }
-.matrix-table tbody td {
+
+.matrix-level-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--level-color);
+  flex-shrink: 0;
+}
+
+.matrix-level-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+  line-height: 1.3;
+}
+
+.matrix-level-name-cn {
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-secondary);
+}
+
+.matrix-content-cell {
+  background: var(--white);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.matrix-content-cell:hover {
+  background: rgba(71,161,173,0.05);
+  box-shadow: inset 0 0 0 2px var(--blue);
+}
+
+.matrix-cell-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+  line-height: 1.3;
+}
+
+.matrix-cell-desc {
+  font-size: 12px;
   line-height: 1.6;
   color: var(--text-secondary);
 }
-.matrix-table tbody tr:hover td {
-  background: rgba(0,61,79,0.03);
-}
-.matrix-cell-title {
-  font-weight: 600;
-  color: var(--text);
-  display: block;
-  margin-bottom: 2px;
-}
-.matrix-dim-icon {
-  display: inline-flex;
-  vertical-align: middle;
-  margin-right: 6px;
-  align-items: center;
-}
-.matrix-dim-icon svg {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+
+/* Old table styles - keep for backwards compatibility but override */
+.matrix-table {
+  display: none;
 }
 
 /* Usage Steps */

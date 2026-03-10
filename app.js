@@ -67,20 +67,45 @@ initTabs('level-tabs', 'level-content', LEVELS,
   table.innerHTML = html;
 })();// --- Matrix Table ---
 (function renderMatrix() {
-  const table = document.getElementById('matrix-table');
-  const dimNames = DIMENSIONS.map(d => `<span class="matrix-dim-icon">${d.icon}</span>${d.name}<br><span style="font-weight:400;font-size:12px">${d.nameCn}</span>`);
-
-  let html = `<thead><tr><th></th>${dimNames.map(n => `<th>${n}</th>`).join('')}</tr></thead><tbody>`;
-
+  const container = document.getElementById('matrix-table').parentElement;
+  
+  let html = '<div class="matrix-grid">';
+  
+  // Header row with dimension names
+  html += '<div class="matrix-header-corner"></div>';
+  DIMENSIONS.forEach(dim => {
+    html += `
+      <div class="matrix-header-cell">
+        <div class="matrix-dim-icon">${dim.icon}</div>
+        <div class="matrix-dim-name">${dim.name}</div>
+        <div class="matrix-dim-name-cn">${dim.nameCn}</div>
+      </div>
+    `;
+  });
+  
+  // Data rows
   LEVELS.forEach((level, li) => {
-    html += `<tr><th><span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:${level.color};margin-right:6px;vertical-align:middle"></span>${level.name}<br><span style="font-weight:400">${level.nameCn}</span></th>`;
+    // Level header cell
+    html += `
+      <div class="matrix-level-cell" style="--level-color: ${level.color}">
+        <div class="matrix-level-dot"></div>
+        <div class="matrix-level-name">${level.name}</div>
+        <div class="matrix-level-name-cn">${level.nameCn}</div>
+      </div>
+    `;
+    
+    // Content cells for each dimension
     DIMENSIONS.forEach(dim => {
       const l = dim.levels[li];
-      html += `<td><span class="matrix-cell-title">${l.title}</span>${l.desc.split('。')[0]}。</td>`;
+      html += `
+        <div class="matrix-content-cell">
+          <div class="matrix-cell-title">${l.title}</div>
+          <div class="matrix-cell-desc">${l.desc}</div>
+        </div>
+      `;
     });
-    html += '</tr>';
   });
-
-  html += '</tbody>';
-  table.innerHTML = html;
+  
+  html += '</div>';
+  container.innerHTML = html;
 })();
