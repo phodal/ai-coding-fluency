@@ -328,14 +328,21 @@ a:hover { text-decoration: underline; }
   z-index: 10;
 }
 .matrix-table thead th:first-child {
-  min-width: 120px;
+  min-width: 160px;
+  position: sticky;
+  left: 0;
+  z-index: 15;
+  background: var(--teal);
 }
 .matrix-table tbody th {
   background: rgba(0,61,79,0.06);
   font-weight: 600;
   font-size: 13px;
   color: var(--teal);
-  min-width: 120px;
+  min-width: 160px;
+  position: sticky;
+  left: 0;
+  z-index: 5;
 }
 .matrix-table tbody td {
   line-height: 1.6;
@@ -354,10 +361,12 @@ a:hover { text-decoration: underline; }
   display: inline-flex;
   vertical-align: middle;
   margin-right: 6px;
+  align-items: center;
 }
 .matrix-dim-icon svg {
   width: 18px;
   height: 18px;
+  flex-shrink: 0;
 }
 
 /* Usage Steps */
