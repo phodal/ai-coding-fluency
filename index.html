@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coding Agent 流畅度模型</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#" class="logo">Coding Agent Fluency</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container">
+        <h1>Coding Agent 流畅度模型</h1>
+        <p class="hero-subtitle">AI 正在逐步进入软件开发核心流程</p>
+        <p class="hero-desc">
+          Coding Agent 流畅度模型帮助团队评估在 AI 辅助开发各维度的成熟度水平，并识别从当前阶段迈向下一阶段所需的关键投入。
+          模型覆盖五大维度、五个流畅度等级，从最初的"意识唤醒"到最终的"智能体优先自治"，为组织提供清晰的演进路径。
+        </p>
+      </div>
+    </section>
+
+    <!-- Overview -->
+    <section class="section" id="overview">
+      <div class="container">
+        <h2>模型概览</h2>
+        <p>
+          该模型改编自 <a href="https://www.agilefluency.org/" target="_blank" rel="noopener">Agile Fluency® Project</a>，
+          将 AI 编码智能体的能力演进划分为五个流畅度等级，并从五个关键维度进行评估。
+          每个维度代表 AI 融入开发流程的一个关键方面，每个等级代表该维度上质的飞跃。
+        </p>
+      </div>
+    </section>
+
+    <!-- Five Levels -->
+    <section class="section section-alt" id="levels">
+      <div class="container">
+        <h2>五个流畅度等级</h2>
+        <p>从初步认知到完全自治，每个等级代表团队与 AI 协作方式的质变。选择一个等级查看详情。</p>
+        <div class="tabs-component">
+          <div class="tabs-nav" id="level-tabs" role="tablist"></div>
+          <div class="tabs-content" id="level-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Five Dimensions -->
+    <section class="section" id="dimensions">
+      <div class="container">
+        <h2>五大评估维度</h2>
+        <p>每个维度聚焦 AI 融入开发流程的一个关键方面。点击维度查看各等级的详细描述。</p>
+        <div class="tabs-component">
+          <div class="tabs-nav" id="dim-tabs" role="tablist"></div>
+          <div class="tabs-content" id="dim-content"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Matrix Table -->
+    <section class="section section-alt" id="matrix">
+      <div class="container">
+        <h2>完整矩阵</h2>
+        <p>以下矩阵展示了五大维度在各流畅度等级下的关键特征，帮助团队快速定位当前状态并规划演进路径。</p>
+        <div class="matrix-wrapper">
+          <table class="matrix-table" id="matrix-table"></table>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Use -->
+    <section class="section" id="how-to-use">
+      <div class="container">
+        <h2>如何使用</h2>
+        <div class="usage-steps">
+          <div class="usage-step">
+            <div class="step-number">1</div>
+            <h3>评估现状</h3>
+            <p>针对每个维度，对照流畅度等级描述，识别团队当前所处的阶段。不同维度可能处于不同等级，这是正常的。</p>
+          </div>
+          <div class="usage-step">
+            <div class="step-number">2</div>
+            <h3>设定目标</h3>
+            <p>根据团队的业务需求和技术能力，为每个维度设定合理的目标等级。不必追求所有维度同时达到最高等级。</p>
+          </div>
+          <div class="usage-step">
+            <div class="step-number">3</div>
+            <h3>规划路径</h3>
+            <p>识别从当前等级到目标等级之间的差距，制定具体的改进计划。优先投入那些对业务价值影响最大的维度。</p>
+          </div>
+          <div class="usage-step">
+            <div class="step-number">4</div>
+            <h3>持续演进</h3>
+            <p>定期重新评估，跟踪进展。流畅度的提升是渐进的，每个等级的跨越都需要时间和实践的积累。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>Adapted from the <a href="https://www.agilefluency.org/" target="_blank" rel="noopener">Agile Fluency® Project</a></span>
+      <span class="footer-sep">·</span>
+      <span>agilefluency.org</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
