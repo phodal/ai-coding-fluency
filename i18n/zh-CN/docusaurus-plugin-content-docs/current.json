@@ -1,0 +1,14 @@
+{
+  "version.label": {
+    "message": "Next",
+    "description": "The label for version current"
+  },
+  "sidebar.modelSidebar.category.Fluency Levels": {
+    "message": "Fluency Levels",
+    "description": "The label for category 'Fluency Levels' in sidebar 'modelSidebar'"
+  },
+  "sidebar.modelSidebar.category.Dimensions": {
+    "message": "Dimensions",
+    "description": "The label for category 'Dimensions' in sidebar 'modelSidebar'"
+  }
+}

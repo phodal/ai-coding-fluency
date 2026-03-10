@@ -1,0 +1,30 @@
+---
+sidebar_position: 4
+title: Governance & Quality
+---
+
+# Governance & Quality (质量与治理)
+
+How code quality and security are ensured for AI-generated code—from fully manual review to agent self-governance.
+
+## Overview
+
+This dimension focuses on quality assurance and governance mechanisms for AI-generated code. As AI participation in development increases, traditional quality assurance methods need to evolve to adapt to new development patterns.
+
+## Levels
+
+### Level 1: Fully Manual (完全人工)
+Relies on manual code review. Quality assurance relies entirely on manual code review, with no AI-involved automated quality checking mechanisms, and review efficiency limited by human resources.
+
+### Level 2: Traditional Validation (传统校验)
+Linter, formatter validation, manual hallucination prevention. Uses traditional static analysis tools for code validation, with humans responsible for identifying and preventing hallucination issues in AI-generated code, establishing initial AI code review awareness.
+
+### Level 3: Integrated Verification (融合验证)
+Static analysis blocking, test coverage gates. AI-generated code is incorporated into automated quality gates, with systematic verification through static analysis and test coverage metrics, forming a human-machine collaborative quality assurance system.
+
+### Level 4: Architecture Constraints (架构约束)
+Custom Agent Linter enforces architectural boundaries. Custom architectural constraint rules for AI agents ensure generated code conforms to system architecture design, preventing architectural decay.
+
+### Level 5: Background GC (后台垃圾回收)
+Background agents periodically clean code entropy and tech debt. Agents autonomously perform code quality maintenance, periodically identifying and cleaning technical debt, maintaining codebase health, achieving self-evolving quality.
+

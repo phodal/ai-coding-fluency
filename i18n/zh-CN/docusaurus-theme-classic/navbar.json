@@ -1,0 +1,14 @@
+{
+  "title": {
+    "message": "AI Coding Fluency",
+    "description": "The title in the navbar"
+  },
+  "item.label.Model": {
+    "message": "Model",
+    "description": "Navbar item with label Model"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

@@ -1,0 +1,81 @@
+---
+sidebar_position: 7
+title: Codebase Readiness
+---
+
+import { ReadinessGrid } from '@site/src/components/FluencyModel';
+
+# Codebase Readiness
+
+The effectiveness of AI coding agents depends not only on model capabilities but also on the codebase environment itself. An "agent-ready" codebase enables any AI tool to perform better.
+
+Referencing [Factory.ai's Agent Readiness framework](https://factory.ai/news/agent-readiness), we recommend that teams systematically optimize their codebase's agent-friendliness while advancing fluency levels.
+
+<ReadinessGrid />
+
+## Key Areas
+
+### 🚀 Fast Feedback Loops
+
+Configure pre-commit hooks to ensure agents get feedback in 5 seconds rather than waiting 10 minutes for CI. Fast feedback is the foundation of efficient agent work.
+
+**Actions:**
+- Set up pre-commit hooks for linting and formatting
+- Configure fast unit test suites that run locally
+- Use incremental builds where possible
+
+### 📚 Clear Documentation
+
+Maintain comprehensive README, CONTRIBUTING, AGENTS.md, and other documentation. Agents need clear guidance to understand project structure, build processes, and development standards.
+
+**Actions:**
+- Create or update README with project overview and setup instructions
+- Add CONTRIBUTING.md with development guidelines
+- Consider adding AGENTS.md specifically for AI agent guidance
+
+### 🧪 Comprehensive Testing
+
+Establish test coverage gates (recommended &gt;80%), allowing agents to confidently verify their generated code and reduce manual verification burden.
+
+**Actions:**
+- Set up test coverage reporting
+- Configure coverage gates in CI
+- Write tests for critical paths first
+
+### 🔒 Automated Quality Gates
+
+Configure linters, formatters, static analysis, and security scanning. These tools provide immediate quality feedback and constraints for agents.
+
+**Actions:**
+- Set up ESLint/Prettier or equivalent for your language
+- Add static analysis tools (SonarQube, CodeClimate, etc.)
+- Configure security scanning (Snyk, Dependabot, etc.)
+
+### 🗺️ Structured Code Organization
+
+Adopt clear directory structures and naming conventions, use "directory maps" to help agents quickly locate relevant code, enabling progressive information disclosure.
+
+**Actions:**
+- Establish consistent directory structure
+- Use clear, descriptive naming conventions
+- Consider adding directory README files
+
+### 📊 Observability
+
+Provide agents with access to logging, monitoring, and debugging tools, enabling them to autonomously diagnose issues and verify fix effectiveness.
+
+**Actions:**
+- Set up structured logging
+- Configure error tracking (Sentry, etc.)
+- Provide access to monitoring dashboards
+
+## The Compound Effect
+
+Codebase environment improvements have a compound effect:
+
+1. A better environment makes agents more efficient
+2. More efficient agents can handle more work
+3. This frees up time to further improve the environment
+
+This positive feedback loop is the core driver of AI coding fluency advancement.
+

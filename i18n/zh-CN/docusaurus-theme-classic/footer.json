@@ -1,0 +1,42 @@
+{
+  "link.title.Model": {
+    "message": "Model",
+    "description": "The title of the footer links column with title=Model in the footer"
+  },
+  "link.title.Resources": {
+    "message": "Resources",
+    "description": "The title of the footer links column with title=Resources in the footer"
+  },
+  "link.title.More": {
+    "message": "More",
+    "description": "The title of the footer links column with title=More in the footer"
+  },
+  "link.item.label.Overview": {
+    "message": "Overview",
+    "description": "The label of footer link with label=Overview linking to /docs/overview"
+  },
+  "link.item.label.Complete Matrix": {
+    "message": "Complete Matrix",
+    "description": "The label of footer link with label=Complete Matrix linking to /docs/matrix"
+  },
+  "link.item.label.How to Use": {
+    "message": "How to Use",
+    "description": "The label of footer link with label=How to Use linking to /docs/how-to-use"
+  },
+  "link.item.label.Agile Fluency® Project": {
+    "message": "Agile Fluency® Project",
+    "description": "The label of footer link with label=Agile Fluency® Project linking to https://www.agilefluency.org/"
+  },
+  "link.item.label.Factory.ai Agent Readiness": {
+    "message": "Factory.ai Agent Readiness",
+    "description": "The label of footer link with label=Factory.ai Agent Readiness linking to https://factory.ai/news/agent-readiness"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/phodal/coding-agent-fluency"
+  },
+  "copyright": {
+    "message": "Adapted from the Agile Fluency® Project. Built with Docusaurus.",
+    "description": "The footer copyright"
+  }
+}

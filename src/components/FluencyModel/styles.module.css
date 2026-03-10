@@ -1,0 +1,391 @@
+/* Tabs Component */
+.tabsComponent {
+  margin-top: 1rem;
+}
+
+.tabsNav {
+  display: flex;
+  gap: 0;
+  border-bottom: 2px solid var(--ifm-color-emphasis-300);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabBtn {
+  padding: 14px 20px;
+  background: none;
+  border: none;
+  border-bottom: 3px solid transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: -2px;
+}
+
+.tabBtn:hover {
+  color: var(--ifm-color-primary);
+  background: var(--ifm-color-emphasis-100);
+}
+
+.tabBtn.active {
+  color: var(--ifm-color-primary);
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+.tabDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.tabsContent {
+  padding: 24px 0 0;
+}
+
+.tabPanel {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tabPanel.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Level Panel */
+.levelPanelHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.levelPanelDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.levelPanelName {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.levelPanelNameCn {
+  font-size: 16px;
+  color: var(--ifm-color-emphasis-600);
+  margin-left: 8px;
+}
+
+.levelPanelSummary {
+  font-size: 16px;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 16px;
+  font-style: italic;
+}
+
+.levelPanelDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 24px;
+}
+
+.levelSignals h4,
+.levelInvestments h4,
+.levelMetrics h4 {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin-bottom: 8px;
+}
+
+.levelSignals ul,
+.levelInvestments ul,
+.levelMetrics ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.levelSignals li,
+.levelInvestments li,
+.levelMetrics li {
+  font-size: 14px;
+  color: var(--ifm-color-emphasis-700);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  line-height: 1.6;
+}
+
+
+/* Dimension Panel */
+.dimPanelHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.dimPanelName {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.dimPanelNameCn {
+  font-size: 16px;
+  color: var(--ifm-color-emphasis-600);
+  margin-left: 8px;
+}
+
+.dimPanelSummary {
+  font-size: 16px;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 12px;
+  font-style: italic;
+}
+
+.dimPanelDesc {
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 28px;
+}
+
+.dimLevelsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.dimLevelItem {
+  border-left: 4px solid var(--ifm-color-emphasis-300);
+  padding: 16px 20px;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 0 8px 8px 0;
+  transition: border-color 0.2s;
+}
+
+.dimLevelItem:hover {
+  border-left-color: var(--ifm-color-primary);
+}
+
+.dimLevelItemHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.dimLevelDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dimLevelLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.dimLevelTitle {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.dimLevelDesc {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Matrix Grid */
+.matrixWrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin-top: 24px;
+}
+
+.matrixGrid {
+  display: grid;
+  grid-template-columns: 180px repeat(5, minmax(200px, 1fr));
+  gap: 1px;
+  background: var(--ifm-color-emphasis-300);
+  border: 1px solid var(--ifm-color-emphasis-300);
+  min-width: 1200px;
+}
+
+.matrixHeaderCorner {
+  background: var(--ifm-color-primary-dark);
+  padding: 16px;
+}
+
+.matrixHeaderCell {
+  background: var(--ifm-color-primary-dark);
+  color: white;
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.matrixDimName {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.matrixDimNameCn {
+  font-size: 11px;
+  font-weight: 400;
+  opacity: 0.85;
+}
+
+.matrixLevelCell {
+  background: var(--ifm-color-emphasis-100);
+  padding: 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+}
+
+.matrixLevelDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--level-color);
+  flex-shrink: 0;
+}
+
+.matrixLevelName {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  line-height: 1.3;
+}
+
+.matrixLevelNameCn {
+  font-size: 10px;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.matrixContentCell {
+  background: var(--ifm-background-color);
+  padding: 14px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all 0.2s;
+  min-height: 100px;
+}
+
+.matrixContentCell:hover {
+  background: var(--ifm-color-emphasis-100);
+  box-shadow: inset 0 0 0 2px var(--ifm-color-primary);
+}
+
+.matrixCellTitle {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  line-height: 1.4;
+}
+
+.matrixCellDesc {
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-700);
+}
+
+/* Readiness Grid */
+.readinessSection {
+  margin-top: 24px;
+}
+
+.readinessGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.readinessItem {
+  padding: 20px;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  border-radius: 8px;
+  background: var(--ifm-background-color);
+  transition: all 0.2s;
+}
+
+.readinessItem:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(0, 61, 79, 0.1);
+}
+
+.readinessItem h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--ifm-color-primary);
+}
+
+.readinessItem p {
+  font-size: 14px;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.readinessNote {
+  padding: 20px;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 4px solid var(--ifm-color-primary);
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.readinessNote strong {
+  color: var(--ifm-color-primary);
+}
+
+@media (max-width: 768px) {
+  .readinessGrid {
+    grid-template-columns: 1fr;
+  }
+  .tabsNav {
+    gap: 0;
+  }
+  .tabBtn {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+}
+
+.levelInvestments,
+.levelMetrics {
+  margin-top: 24px;
+}
+
