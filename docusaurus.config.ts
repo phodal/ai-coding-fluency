@@ -17,11 +17,11 @@ const config: Config = {
   // Set the production url of your site here
   url: 'https://phodal.github.io',
   // Set the /<baseUrl>/ pathname under which your site is served
-  baseUrl: '/coding-agent-fluency/',
+  baseUrl: '/ai-coding-fluency/',
 
   // GitHub pages deployment config.
   organizationName: 'phodal',
-  projectName: 'coding-agent-fluency',
+  projectName: 'ai-coding-fluency',
   trailingSlash: false,
 
   onBrokenLinks: 'throw',
@@ -48,7 +48,7 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          editUrl: 'https://github.com/phodal/coding-agent-fluency/tree/master/',
+          editUrl: 'https://github.com/phodal/ai-coding-fluency/tree/master/',
         },
         blog: false, // Disable blog for now
         theme: {
@@ -77,7 +77,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/phodal/coding-agent-fluency',
+          href: 'https://github.com/phodal/ai-coding-fluency',
           label: 'GitHub',
           position: 'right',
         },
@@ -121,7 +121,7 @@ const config: Config = {
           items: [
             {
               label: 'GitHub',
-              href: 'https://github.com/phodal/coding-agent-fluency',
+              href: 'https://github.com/phodal/ai-coding-fluency',
             },
           ],
         },
