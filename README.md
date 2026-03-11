@@ -42,15 +42,38 @@ Each dimension focuses on a critical aspect of AI integration into the developme
 
 ## Features
 
-- Interactive web interface with tabbed navigation
+- Built with [Docusaurus](https://docusaurus.io/) for modern documentation experience
+- Interactive React components with tabbed navigation
 - Complete matrix view showing all dimensions across fluency levels
-- Detailed descriptions for each level and dimension
-- Visual indicators and color coding for easy navigation
+- Detailed MDX documentation for each level and dimension
+- Bilingual support (English and Chinese)
 - Responsive design for mobile and desktop
+- GitHub Pages deployment
 
 ## Getting Started
 
-Simply open `index.html` in a web browser to explore the model. No build process or dependencies required.
+Visit the live site: [https://phodal.github.io/ai-coding-fluency/](https://phodal.github.io/ai-coding-fluency/)
+
+### Local Development
+
+```bash
+npm install
+npm start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```bash
+npm run build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+The site is automatically deployed to GitHub Pages via GitHub Actions when changes are pushed to the master branch.
 
 ## Credits
 
