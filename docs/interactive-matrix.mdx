@@ -1,0 +1,46 @@
+---
+sidebar_position: 7
+---
+
+# Interactive Matrix
+
+import InteractiveMatrix from '@site/src/components/FluencyModel/InteractiveMatrix';
+
+This interactive matrix allows you to explore the AI Coding Fluency Model in detail. Click on any cell to see more information about that specific combination of level and dimension.
+
+## How to Use
+
+- **Hover** over rows or columns to highlight them
+- **Click** on any cell to see detailed information
+- **Click again** or press the ✕ button to close the details panel
+
+<InteractiveMatrix />
+
+## Understanding the Matrix
+
+The matrix shows how each of the five dimensions evolves across the five fluency levels:
+
+### Rows (Levels)
+Each row represents a fluency level, from Level 1 (Awareness) at the top to Level 5 (Agent-First) at the bottom.
+
+### Columns (Dimensions)
+Each column represents one of the five assessment dimensions:
+- **Human-AI Collaboration**: How the collaboration model evolves
+- **SDLC Coverage**: How many development stages AI covers
+- **AI Engineering Harness**: Infrastructure maturity
+- **Governance & Quality**: Quality assurance mechanisms
+- **Context Engineering**: AI's context capabilities
+
+### Cells
+Each cell describes the key characteristic of that dimension at that level. Click on a cell to see:
+- The characteristic title
+- A detailed description
+- How it differs from adjacent levels
+
+## Key Insights
+
+- **Non-uniform progression**: Teams don't need to be at the same level across all dimensions
+- **Dependencies**: Some dimensions may need to advance before others can progress
+- **Incremental steps**: Each level builds on the previous one
+- **Context matters**: The right level depends on your team's goals and constraints
+

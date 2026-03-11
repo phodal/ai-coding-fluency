@@ -47,6 +47,45 @@
   "fluency.readinessInsight": {
     "message": "代码库环境的改进具有复合效应。更好的环境让智能体更高效，更高效的智能体能处理更多工作，从而释放时间进一步改进环境。"
   },
+  "assessment.title": {
+    "message": "流畅度自评估"
+  },
+  "assessment.subtitle": {
+    "message": "评估您的团队在 AI 辅助开发各维度的当前水平"
+  },
+  "assessment.selectLevel": {
+    "message": "选择当前等级"
+  },
+  "assessment.yourLevel": {
+    "message": "您的等级"
+  },
+  "assessment.recommendations": {
+    "message": "改进建议"
+  },
+  "assessment.nextSteps": {
+    "message": "下一步行动"
+  },
+  "assessment.reset": {
+    "message": "重置评估"
+  },
+  "assessment.saveProgress": {
+    "message": "保存进度"
+  },
+  "assessment.dimension": {
+    "message": "维度"
+  },
+  "assessment.currentState": {
+    "message": "当前状态"
+  },
+  "assessment.targetState": {
+    "message": "目标状态"
+  },
+  "assessment.gap": {
+    "message": "差距"
+  },
+  "assessment.noSelection": {
+    "message": "尚未选择"
+  },
   "theme.ErrorPageContent.title": {
     "message": "页面已崩溃。",
     "description": "The title of the fallback page when the page crashed"
