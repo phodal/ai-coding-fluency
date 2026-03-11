@@ -572,6 +572,562 @@
   color: var(--ifm-color-emphasis-800);
 }
 
+/* DFM (Digital Fluency Model) Style Assessment */
+.dfmContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.dfmDashboard {
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.dfmHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.dfmHeader h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.dfmSubtitle {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.dfmBlocks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.dfmBlock {
+  background: var(--ifm-background-surface-color);
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.dfmBlock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--block-color);
+}
+
+.dfmBlock:hover {
+  border-color: var(--block-color);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
+}
+
+.dfmBlock.completed {
+  border-color: var(--block-color);
+  background: linear-gradient(to bottom, var(--ifm-background-surface-color), rgba(0, 0, 0, 0.02));
+}
+
+.dfmBlockHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.dfmBlockIcon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.checkmark {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.dfmBlockHeader h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.dfmBlockNameCn {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-top: 0.25rem;
+}
+
+.dfmBlockDesc {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  min-height: 3rem;
+}
+
+.dfmBlockStatus {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem;
+  background: var(--ifm-color-emphasis-100);
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.statusLabel {
+  color: var(--ifm-color-emphasis-800);
+}
+
+.statusArrow {
+  color: var(--ifm-color-primary);
+  font-weight: bold;
+}
+
+.dfmSelectButton {
+  width: 100%;
+  padding: 0.75rem 1.5rem;
+  border: 2px solid var(--block-color);
+  background: transparent;
+  color: var(--block-color);
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dfmSelectButton:hover {
+  background: var(--block-color);
+  color: white;
+}
+
+.dfmProgress {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.progressBar {
+  flex: 1;
+  height: 8px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  border-radius: 4px;
+  transition: width 0.5s ease;
+}
+
+.progressText {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-700);
+  white-space: nowrap;
+}
+
+.dfmActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Dimension View */
+.dfmDimensionView {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.backButton {
+  background: none;
+  border: none;
+  color: var(--ifm-color-primary);
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.backButton:hover {
+  text-decoration: underline;
+}
+
+.dfmDimensionHeader {
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border-left: 6px solid;
+  margin-bottom: 2rem;
+}
+
+.dfmDimensionHeader h2 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1.75rem;
+}
+
+.dfmDimensionNameCn {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1rem;
+}
+
+.dfmDimensionDesc {
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.dfmLevelSelection,
+.dfmTargetSelection {
+  margin-bottom: 2.5rem;
+}
+
+.dfmLevelSelection h3,
+.dfmTargetSelection h3 {
+  margin-bottom: 0.5rem;
+}
+
+.selectionHint {
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1.5rem;
+}
+
+.dfmLevels {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.dfmLevelCard {
+  padding: 1.25rem;
+  border: 2px solid var(--ifm-color-emphasis-300);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: var(--ifm-background-surface-color);
+}
+
+.dfmLevelCard:hover:not(.disabled) {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.dfmLevelCard.currentSelected {
+  border-color: var(--ifm-color-success);
+  background: rgba(107, 158, 120, 0.08);
+}
+
+.dfmLevelCard.targetSelected {
+  border-color: var(--ifm-color-primary);
+  background: rgba(71, 161, 173, 0.08);
+}
+
+.dfmLevelCard.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.dfmLevelHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.dfmLevelDot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.dfmLevelInfo {
+  flex: 1;
+}
+
+.dfmLevelName {
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.dfmLevelNameCn {
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-left: 0.5rem;
+}
+
+.currentBadge,
+.targetBadge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.currentBadge {
+  background: var(--ifm-color-success);
+  color: white;
+}
+
+.targetBadge {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.dfmLevelContent h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 1rem;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.dfmLevelContent p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.9rem;
+}
+
+/* Investments Section */
+.dfmInvestments {
+  background: var(--ifm-color-primary-lightest);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.dfmInvestments h3 {
+  margin-top: 0;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.investmentHint {
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.5rem;
+}
+
+.investmentPhase {
+  background: var(--ifm-background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.investmentPhase:last-child {
+  margin-bottom: 0;
+}
+
+.investmentPhase h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+}
+
+.investmentPhase ul {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.investmentPhase li {
+  margin: 0.5rem 0;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.dfmDimensionActions {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+/* Report View */
+.dfmReport {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.dfmReportHeader {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.dfmReportHeader h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary-darkest);
+}
+
+.dfmReportHeader p {
+  color: var(--ifm-color-emphasis-700);
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.dfmPatternGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.dfmPatternCard {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.patternHeader {
+  padding: 1.25rem;
+  color: white;
+}
+
+.patternHeader h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.patternHeader p {
+  margin: 0.25rem 0 0 0;
+  opacity: 0.9;
+  font-size: 0.9rem;
+}
+
+.patternBody {
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+}
+
+.patternLevels {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.patternLevel {
+  text-align: center;
+}
+
+.patternLevelLabel {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 0.25rem;
+}
+
+.patternLevelValue {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.patternArrow {
+  font-size: 1.5rem;
+  color: var(--ifm-color-emphasis-400);
+}
+
+.patternGap {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  text-align: center;
+}
+
+.gapLabel {
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.dfmReportSummary {
+  background: var(--ifm-background-surface-color);
+  padding: 2rem;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.dfmReportSummary h3 {
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.roadmapSection {
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.roadmapSection:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.roadmapSection h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+}
+
+.roadmapPhase {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.phaseHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.phaseDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.roadmapPhase ul {
+  margin: 0;
+  padding-left: 2rem;
+}
+
+.roadmapPhase li {
+  margin: 0.25rem 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+}
+
+.dfmReportActions {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
 /* Interactive Matrix Styles */
 .interactiveMatrixContainer {
   position: relative;
